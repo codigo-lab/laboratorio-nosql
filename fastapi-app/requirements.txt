@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pymongo
+requests
+pydantic
+slowapi==0.1.10

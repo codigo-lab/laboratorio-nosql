@@ -97,6 +97,7 @@ db.createUser({
     user: "lab_admin",
     pwd: passwordPrompt(),
     roles: [{ role: "userAdminAnyDatabase", db: "admin" }]
+})
 ```
 
 
@@ -148,7 +149,7 @@ Desde PowerShell, situarse en el directorio raíz del proyecto y ejecutar:
 docker compose up -d --build
 ```
 
-El comando descarga las imágenes necesarias, construye la aplicación FastAPI e inicia los tres servicios definidos en `docker-compose.yml`.
+El comando descarga las imágenes necesarias, construye la aplicación FastAPI e inicia los cuatro servicios definidos en `docker-compose.yml`.
 
 Para comprobar el estado de los contenedores:
 
@@ -180,7 +181,7 @@ El script crea los siguientes datos de prueba en la base de datos `tienda`:
 La carga de artículos se realiza manualmente desde PowerShell, en el directorio raíz del proyecto:
 
 ```powershell
-(Get-Content .\init_elastic.sh -Raw) -replace "r", "" | docker compose exec -T elasticsearch sh
+(Get-Content .\init_elastic.sh -Raw) -replace "`r", "" | docker compose exec -T elasticsearch sh
 ```
 
 

@@ -1,0 +1,14 @@
+# Credenciales
+.env
+
+# Copias de seguridad de MongoDB
+respaldo_tienda/
+tienda-backup.archive.gz
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Exclusión de respaldos de MongoDB del control de versiones
+respaldo_tienda/
+tienda-backup.archive.gz
